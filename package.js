@@ -6,7 +6,7 @@ Package.describe({
 Package.on_use(function (api, where) {
   api.use(['handlebars', 'mongo-livedata'], 'server'); //Needed by helpers for test and live,
 
-  api.add_files(['bind-collection.js', 'bind-helpers.js', 'bind-record.js', 'bind-validators.js'], ['client', 'server']);
+  api.add_files(['bind-collection.js', 'bind-helpers.js', 'bind-record.js', 'bind-validators.js'], 'client');
 });
 
 Package.on_test(function (api) {

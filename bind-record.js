@@ -1,4 +1,4 @@
-function BindRecord() {
+BindRecord = function() {
   var self = this;
   self.records = [];
   self.listeners = {};
@@ -11,7 +11,7 @@ function BindRecord() {
     } else {
       /* Implement listener - Value just read */
       var main = self;
-      var context = Meteor.deps.Context.current;
+      var context = Deps.currentComputation;
       if (context && !self.listeners[context.id]) {
         self.listeners[context.id] = context;
         context.onInvalidate(function () {

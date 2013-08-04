@@ -1,5 +1,5 @@
 //This object should maybe have its own life / file / package as a git project?
-var Validators = {
+Validators = {
   email: function(value) {
     var re = /\S+@\S+\.\S+/;
     return (re.test(value) || !value);
